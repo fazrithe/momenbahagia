@@ -3,95 +3,182 @@
 @section('title', __('Dashboard'))
 
 @section('content')
-    <div class="container py-4">
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <x-frontend.card>
-                    <x-slot name="header">
-                        @lang('Dashboard')
-                    </x-slot>
-
-                    <x-slot name="body">
-                    <div class="row">
-                        <div class="col-4">
-                        <div class="card" style="width: 18rem;">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Kategori 1</li>
-                                <li class="list-group-item">Kategori 2</li>
-                                <li class="list-group-item">Kategpri 3</li>
-                            </ul>
-                        </div>
-                        </div>
-                        <div class="col-8">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                            <img src="..." class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                        </div>
-                        </div>
-                    </div><br>
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                            </div>
-                        </div>
-                        
+<div class="header bg-primary pb-6">
+    <div class="container-fluid">
+      <div class="header-body">
+        <div class="row align-items-center py-4">
+          <div class="col-lg-6 col-7">
+            <h6 class="h2 text-white d-inline-block mb-0">Default</h6>
+            <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+              <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Default</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="col-lg-6 col-5 text-right">
+            <a href="#" class="btn btn-sm btn-neutral">New</a>
+            <a href="#" class="btn btn-sm btn-neutral">Filters</a>
+          </div>
+        </div>
+        <!-- Card stats -->
+        <div class="row">
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats">
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">Total Tamu</h5>
+                    <span class="h2 font-weight-bold mb-0">350,897</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                      <i class="ni ni-active-40"></i>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            
-                        </div>
+                  </div>
+                </div>
+                <p class="mt-3 mb-0 text-sm">
+                  <span class="text-nowrap">Detail</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats">
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">Total Whatshap</h5>
+                    <span class="h2 font-weight-bold mb-0">2,356</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                      <i class="ni ni-chart-pie-35"></i>
                     </div>
-                    </x-slot>
-                </x-frontend.card>
-            </div><!--col-md-10-->
-        </div><!--row-->
-    </div><!--container-->
+                  </div>
+                </div>
+                <p class="mt-3 mb-0 text-sm">
+                  <span class="text-nowrap">Detail</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats">
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">Total Email</h5>
+                    <span class="h2 font-weight-bold mb-0">924</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
+                      <i class="ni ni-money-coins"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="mt-3 mb-0 text-sm">
+                  <span class="text-nowrap">Detail</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats">
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">Total Penerima Undangan</h5>
+                    <span class="h2 font-weight-bold mb-0">493</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                      <i class="ni ni-chart-bar-32"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="mt-3 mb-0 text-sm">
+                  <span class="text-nowrap">Detail</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Page content -->
+  <div class="container-fluid mt--6">
+    <div class="row">
+      <div class="col-xl-8">
+        <div class="card">
+          <div class="card-header border-0">
+            <div class="row align-items-center">
+              <div class="col">
+                <h3 class="mb-0">Template yang di gunakan</h3>
+              </div>
+              <div class="col text-right">
+                <a href="#!" class="btn btn-sm btn-primary">See all</a>
+              </div>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <!-- Projects table -->
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Visitors</th>
+                  <th scope="col">Unique users</th>
+                  <th scope="col">Rp.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    Batik
+                  </th>
+                  <td>
+                    4,569
+                  </td>
+                  <td>
+                    340
+                  </td>
+                  <td>
+                    90.000
+                  </td>
+                </tr>
+               
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4">
+        <div class="card">
+          <div class="card-header border-0">
+            <div class="row align-items-center">
+              <div class="col">
+                <h3 class="mb-0">Rangkaian Acara</h3>
+              </div>
+              <div class="col text-right">
+                <a href="#!" class="btn btn-sm btn-primary">See all</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-header border-0">
+          <div class="row align-items-center">
+            <div class="col">
+                    Akad Nikah
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
 @endsection
